@@ -1,18 +1,48 @@
 import { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { setUser } from "../redux/userSlice";
+
+const mockStudent = {
+    id: 1234,
+    token: 11111111111,
+    permission: 'parent'
+}
+
+const mockParent = {
+    id: 2222,
+    token: 123456789,
+    permission: 'parent'
+}
+
+const mockTeacher = {
+    id: 3333,
+    token: 133456789,
+    permission: 'teacher'
+}
 
 const AuthPage = () => { 
+    const [_login,setLogin] = useState(null);
+    const [_passowrd,setPassword] = useState(null);
 
-    
-    const [_login,setLogin] = useState(null)
-    const [_passowrd,setPassword] = useState(null)
+    const dispatch = useDispatch();
 
-    function login(){
-
+    const login = () => {
+        switch(_login){
+            case 'student':
+                dispatch(setUser(mockStudent));
+                break;
+            case 'parent':
+                dispatch(setUser(mockParent));
+                break;
+            case 'teacher':
+                dispatch(setUser(mockTeacher));
+                break;
+        }
     }
 
     function checkInputs(){
         if(_login==="admin"&&_passowrd==="admin")
-            console.log("podano dobre dane")          
+            login();         
         else
             console.log("podano złe dane")    
     }
