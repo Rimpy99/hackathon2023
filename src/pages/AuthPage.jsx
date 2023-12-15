@@ -1,17 +1,54 @@
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { setUser } from "../redux/userSlice";
 
-const AuthPage = () => {
-    const [_login, setLogin] = useState(null);
-    const [_password, setPassword] = useState(null);
+const mockStudent = {
+    id: 1234,
+    token: 11111111111,
+    permission: 'parent'
+}
 
-    function checkInputs() {
-        if (_login === "admin" && _password === "admin")
-            console.log("Correct credentials");
-        else console.log("Incorrect credentials");
+const mockParent = {
+    id: 2222,
+    token: 123456789,
+    permission: 'parent'
+}
+
+const mockTeacher = {
+    id: 3333,
+    token: 133456789,
+    permission: 'teacher'
+}
+
+const AuthPage = () => { 
+    const [_login,setLogin] = useState(null);
+    const [_password,setPassword] = useState(null);
+
+    const dispatch = useDispatch();
+
+    const login = () => {
+        switch(_login){
+            case 'student':
+                dispatch(setUser(mockStudent));
+                break;
+            case 'parent':
+                dispatch(setUser(mockParent));
+                break;
+            case 'teacher':
+                dispatch(setUser(mockTeacher));
+                break;
+        }
     }
 
+    function checkInputs(){
+        if(_login!==""&&_password!=="")
+            login();         
+        else
+            console.log("podano złe dane")    
+    }
+  
     return (
         <>
             <div className="flex justify-center items-center h-screen">
