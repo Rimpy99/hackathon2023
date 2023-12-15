@@ -1,5 +1,6 @@
 
 const AuthPage = () => {
+
     return(
         <></>
     );
