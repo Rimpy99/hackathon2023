@@ -7,12 +7,12 @@ const AuthPage = () => {
     const [_passowrd,setPassword] = useState(null)
 
     function login(){
-
+        console.log("zalogowano")
     }
 
     function checkInputs(){
         if(_login==="admin"&&_passowrd==="admin")
-            console.log("podano dobre dane")          
+            login()       
         else
             console.log("podano złe dane")    
     }
