@@ -1,8 +1,13 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import AuthPage from "./pages/AuthPage";
+
 const App = () => {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AuthPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
