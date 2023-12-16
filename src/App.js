@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import AuthPage from "./pages/AuthPage";
 import HomePage from "./pages/HomePage";
+import CalendarPage from "./pages/CalendarPage";
 import Navbar from "./components/Navbar";
 import {useSelector} from "react-redux";
 
@@ -14,6 +15,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<AuthPage/>}/>
                     <Route path="/home" element={user.id ? <HomePage/> : <AuthPage />}/>
+                    <Route path="/calendar" element={user.id ? <CalendarPage/> : <AuthPage />}/>
                 </Routes>
             </div>
             <div className={user.id && "basis-2/12"}>
