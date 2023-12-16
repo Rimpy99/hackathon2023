@@ -1,14 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faCalendarAlt, faSignOutAlt, faUser } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/Logo_appka.png";
+import { faCog, faCalendarAlt, faSignOutAlt, faUser, faSchool } from "@fortawesome/free-solid-svg-icons";
+import { useSelector} from "react-redux";
 
 const Navbar = () => {
+    const user = useSelector(state => state.user);
+
     return (
         <div className="flex flex-col h-screen bg-black text-white p-4 items-center text-lg">
-            <div className="flex flex-col items-center mb-4 basis-1/12">
-                <img src={logo} alt="logo" className="w-20 h-20 mr-2" />
-                <span>AppName</span>
+            <div className="flex flex-col items-center mb-4 py-3 basis-1/12">
+                <FontAwesomeIcon icon={faSchool} className="mr-2 py-3" />
+                <span>{user.login}</span>
             </div>
             <ul className="list-none basis-11/12 flex flex-col">
                 <div>

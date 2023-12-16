@@ -5,13 +5,15 @@ export const userSlice = createSlice({
     initialState: {
         id: null,
         token: null,
-        permission: null, 
+        permission: null,
+        login: null,
     },
     reducers: {
         setUser: (state, action) => {
             state.id = action.payload.id;
             state.token = action.payload.token;
             state.permission = action.payload.permission;
+            state.login = action.payload.login;
         }
     }
 })

@@ -9,19 +9,22 @@ import logo from "../assets/Logo_appka.png";
 const mockStudent = {
     id: 1234,
     token: 11111111111,
-    permission: 'student'
+    permission: 'student',
+    login: 'Jan Kowalski'
 }
 
 const mockParent = {
     id: 2222,
     token: 123456789,
-    permission: 'parent'
+    permission: 'parent',
+    login: 'Kylian Mbappe'
 }
 
 const mockTeacher = {
     id: 3333,
     token: 133456789,
-    permission: 'teacher'
+    permission: 'teacher',
+    login: 'Robert Lewandowski'
 }
 
 const mockUsersLogins = [ 'student', 'parent', 'teacher' ];
