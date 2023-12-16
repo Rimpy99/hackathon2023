@@ -8,30 +8,16 @@ const App = () => {
   const user = useSelector(state => state.user);
 
   return (
-    // <BrowserRouter>
-    //     <div className={user.id && "flex"}>
-    //         <div className={user.id && "basis-10/12"}>
-    //             <Routes>
-    //                 <Route path="/" element={<AuthPage/>}/>
-    //                 <Route path="/home" element={<HomePage/>}/>
-    //             </Routes>
-    //         </div>
-    //         <div className={user.id && "basis-2/12"}>
-    //             {user.id && <Navbar/>}
-    //         </div>
-    //     </div>
-    // </BrowserRouter>
-
     <BrowserRouter>
-        <div className="flex">
-            <div className="basis-10/12">
+        <div className={user.id && "flex"}>
+            <div className={user.id && "basis-10/12"}>
                 <Routes>
                     <Route path="/" element={<AuthPage/>}/>
                     <Route path="/home" element={<HomePage/>}/>
                 </Routes>
             </div>
-            <div className="basis-2/12">
-                <Navbar/>
+            <div className={user.id && "basis-2/12"}>
+                {user.id && <Navbar/>}
             </div>
         </div>
     </BrowserRouter>
