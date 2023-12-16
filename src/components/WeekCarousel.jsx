@@ -14,20 +14,20 @@ const WeekCarousel = () => {
 
     return(
         <div className="px-12 pb-6">
-            <div className="overflow-hidden bg-gray-800 h-max rounded-2xl">
-                <div className="flex h-fit">
+            <div className="overflow-hidden bg-gray-800 h-max rounded-b-2xl">
+                <div className="flex">
                     <Week slideNumber={currentSlide}/>
                 </div>
             </div>
             <div className="flex justify-center my-4">
                 <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l-2xl"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-bl-2xl"
                     onClick={() => leftClicked()}
                 >
                     Previous week
                 </button>
                 <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-2xl"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-br-2xl"
                     onClick={() => rightClicked()}
                 >
                     Next week
