@@ -4,18 +4,18 @@ const mockTasks = [
         [
             {
                 subject: "Math",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore inventore sit praesentium ex incidunt maiores architecto possimus iste tempora aliquid!"
+                description: "Solve the following algebraic equations: 2x + 5 = 15"
             },
             {
                 subject: "English",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nesciunt veniam rerum libero tempora iste reiciendis ipsa tempore amet animi deleniti, eius et! Consequatur adipisci itaque corporis, quaerat nulla cupiditate esse sed assumenda, eveniet aliquid error eos voluptatum repudiandae mollitia."
+                description: "Write a short story using at least five vocabulary words from this week's lesson"
             }
         ],
         [],
         [
             {
                 subject: "Spanish",
-                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, fugit."
+                description: "Create flashcards with vocabulary words related to daily activities."
             }
         ],
         []
@@ -24,7 +24,7 @@ const mockTasks = [
         [
             {
                 subject: "History",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa beatae incidunt nihil quaerat, cupiditate eius."
+                description: "Write an essay discussing the impact of a historical figure on society."
             }
         ],
         [],
@@ -32,7 +32,7 @@ const mockTasks = [
         [
             {
                 subject: "Art",
-                description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus debitis sit vero perspiciatis, illum alias quos obcaecati nobis! Sequi, aliquam dolorum, ex rerum quia quae praesentium pariatur vel distinctio est optio dolore dignissimos voluptate maxime fugiat laborum nemo. Quo, commodi."
+                description: "Create a collage representing different art movements and styles."
             }
         ],
         []
@@ -53,6 +53,8 @@ const Week = ({slideNumber}) => {
                             day.map(task => {
                                 return <div className="h-32 mx-5 bg-white border-l-4 border-red-400 rounded my-4 text-xl text-center text-black flex flex-col overflow-auto">
                                     <div className="bg-red-500">{task.subject}</div>
+                                    <div className="text-base">{task.description}</div>
+
                                 </div>
                             }) 
                         :
