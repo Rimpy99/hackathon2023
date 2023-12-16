@@ -7,7 +7,7 @@ import { setUser } from "../redux/userSlice";
 const mockStudent = {
     id: 1234,
     token: 11111111111,
-    permission: 'parent'
+    permission: 'student'
 }
 
 const mockParent = {
@@ -21,6 +21,8 @@ const mockTeacher = {
     token: 133456789,
     permission: 'teacher'
 }
+
+const mockUsersLogins = [ 'student', 'parent', 'teacher' ];
 
 const AuthPage = () => { 
     const [_login,setLogin] = useState(null);
@@ -43,10 +45,12 @@ const AuthPage = () => {
     }
 
     function checkInputs(){
-        if(_login!==""&&_password!=="")
-            login();         
-        else
-            console.log("podano złe dane")    
+        if(mockUsersLogins.includes(_login)){
+            login();  
+            console.log(_login)
+        }else{
+            console.log("podano złe dane");
+        }  
     }
   
     return (
