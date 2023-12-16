@@ -8,7 +8,7 @@ import logo from "../assets/Logo_appka.png";
 const mockStudent = {
     id: 1234,
     token: 11111111111,
-    permission: 'parent'
+    permission: 'student'
 }
 
 const mockParent = {
@@ -23,9 +23,11 @@ const mockTeacher = {
     permission: 'teacher'
 }
 
+const mockUsersLogins = [ 'student', 'parent', 'teacher' ];
+
 const AuthPage = () => {
-    const [_login, setLogin] = useState(null);
-    const [_password, setPassword] = useState(null);
+    const [_login,setLogin] = useState(null);
+    const [_password,setPassword] = useState(null);
 
     const dispatch = useDispatch();
 
@@ -43,22 +45,19 @@ const AuthPage = () => {
         }
     }
 
-    function checkInputs() {
-        if (_login !== "" && _password !== "")
+    function checkInputs(){
+        if(mockUsersLogins.includes(_login)){
             login();
-        else
-            console.log("podano złe dane")
+            console.log(_login)
+        }else{
+            console.log("podano złe dane");
+        }
     }
 
     return (
         <>
             <div className="flex justify-center items-center h-screen">
                 <div className="bg-gray-800 p-8 shadow-md rounded-2xl w-1/3 relative">
-                    <img
-                        src={logo}
-                        alt="Logo"
-                        className="mb-8 w-20 h-20 mx-auto"
-                    />
                     <h1 className="text-3xl font-bold mb-4 text-center text-gray-200">
                         Study Smart, Not Hard
                     </h1>
