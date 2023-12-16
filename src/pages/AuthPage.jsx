@@ -92,7 +92,7 @@ const AuthPage = () => {
                     <input
                         type="button"
                         value="Log in"
-                        className="bg- hover:bg-blue-300 text-white p-2 rounded-md cursor-pointer w-full transition duration-300 ease-in-out"
+                        className="bg-blue-400 hover:bg-blue-300 text-white p-2 rounded-md cursor-pointer w-full transition duration-300 ease-in-out"
                         onClick={() => checkInputs()}
                     />
                     <p className="text-gray-300 text-center mt-4">
