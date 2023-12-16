@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog, faCalendarAlt, faSignOutAlt, faUser, faSchool } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { signOut } from "../redux/userSlice";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const user = useSelector(state => state.user);
@@ -11,7 +12,9 @@ const Navbar = () => {
     return (
         <div className="flex flex-col h-screen bg-black text-white p-4 items-center text-lg">
             <div className="flex flex-col items-center mb-4 py-3 basis-1/12">
-                <FontAwesomeIcon icon={faSchool} className="mr-2 py-3" />
+                <Link to="/home">
+                    <FontAwesomeIcon icon={faSchool} className="mr-2 py-3" />
+                </Link>
                 <span>{user.login}</span>
             </div>
             <ul className="list-none basis-11/12 flex flex-col">
@@ -22,8 +25,10 @@ const Navbar = () => {
                     <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer ">
                         <FontAwesomeIcon icon={faCog} className="mr-2" /> Preferences
                     </li>
-                    <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer">
-                        <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" /> Calendar
+                    <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer" >
+                        <Link to="/calendar">
+                            <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" /> Calendar
+                        </Link>
                     </li>
                 </div>
                 <div className="mt-auto">
