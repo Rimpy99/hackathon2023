@@ -39,12 +39,15 @@ const mockTasks = [
     ]
 ];
 
+const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
 const Week = ({slideNumber}) => {
     return(
         <>
             {mockTasks[slideNumber].map((day, index) => {
                 return(
                     <div className={`flex-1 ${index % 2 && 'bg-gray-700'} h-[500px]`}>
+                        <h1>{weekDays[index]}</h1>
                         {day.length
                         ?
                             day.map(task => {
