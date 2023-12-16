@@ -8,12 +8,20 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AuthPage/>}/>
-      </Routes>
-        {/*{user.id && <Navbar/>}*/}
-        <Navbar/>
+        <div className="flex">
+            <div className="basis-10/12">
+                <Routes>
+                    <Route path="/" element={<AuthPage/>}/>
+                </Routes>
+            </div>
+            <div className="basis-2/12">
+                {/*{user.id && <Navbar/>}*/}
+                <Navbar/>
+            </div>
+      </div>
     </BrowserRouter>
+
+
   );
 }
 
