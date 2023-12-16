@@ -54,7 +54,6 @@ const Week = ({slideNumber}) => {
                                 return <div className="h-32 mx-5 bg-white border-l-4 border-red-400 rounded my-4 text-xl text-center text-black flex flex-col overflow-auto">
                                     <div className="bg-red-500">{task.subject}</div>
                                     <div className="text-base">{task.description}</div>
-
                                 </div>
                             }) 
                         :
