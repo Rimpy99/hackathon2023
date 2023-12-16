@@ -13,7 +13,7 @@ const App = () => {
             <div className={user.id && "basis-10/12"}>
                 <Routes>
                     <Route path="/" element={<AuthPage/>}/>
-                    <Route path="/home" element={<HomePage/>}/>
+                    <Route path="/home" element={user.id ? <HomePage/> : <AuthPage />}/>
                 </Routes>
             </div>
             <div className={user.id && "basis-2/12"}>
