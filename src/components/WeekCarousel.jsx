@@ -2,14 +2,14 @@ import { useState } from "react";
 import Week from "./Week";
 
 const WeekCarousel = () => {
-    const [ currentSlide, setCurrentSlide ] = useState(1);
+    const [ currentSlide, setCurrentSlide ] = useState(0);
 
     const leftClicked = () => {
-        currentSlide !== 1 && setCurrentSlide(currentSlide => currentSlide - 1);
+        currentSlide !== 0 && setCurrentSlide(currentSlide => currentSlide - 1);
     }
 
     const rightClicked = () => {
-        currentSlide !== 4 && setCurrentSlide(currentSlide => currentSlide + 1);
+        currentSlide !== 1 && setCurrentSlide(currentSlide => currentSlide + 1);
     }
 
     return(
