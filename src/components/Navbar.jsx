@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faCalendarAlt, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCog, faCalendarAlt, faSignOutAlt, faUser } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/Logo_appka.png";
 
 const Navbar = () => {
@@ -12,6 +12,9 @@ const Navbar = () => {
             </div>
             <ul className="list-none basis-11/12 flex flex-col">
                 <div>
+                    <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer">
+                        <FontAwesomeIcon icon={faUser} className="mr-2" /> Profile
+                    </li>
                     <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer ">
                         <FontAwesomeIcon icon={faCog} className="mr-2" /> Preferences
                     </li>
