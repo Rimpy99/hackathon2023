@@ -13,15 +13,15 @@ const Navbar = () => {
             <ul className="list-none basis-11/12 flex flex-col">
                 <div>
                     <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer ">
-                        <FontAwesomeIcon icon={faCog} className="mr-2" /> Opcje
+                        <FontAwesomeIcon icon={faCog} className="mr-2" /> Preferences
                     </li>
                     <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer">
-                        <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" /> Kalendarz
+                        <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" /> Calendar
                     </li>
                 </div>
                 <div className="mt-auto">
                     <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer">
-                        <FontAwesomeIcon icon={faSignOutAlt} className="mr-2" /> Wyloguj
+                        <FontAwesomeIcon icon={faSignOutAlt} className="mr-2" /> Logout
                     </li>
                 </div>
             </ul>
