@@ -9,12 +9,12 @@ const App = () => {
   return (
     <BrowserRouter>
         <div className={user.id && "flex"}>
-            <div className={!user.id && "basis-10/12"}>
+            <div className={user.id && "basis-10/12"}>
                 <Routes>
                     <Route path="/" element={<AuthPage/>}/>
                 </Routes>
             </div>
-            <div className={!user.id && "basis-2/12"}>
+            <div className={user.id && "basis-2/12"}>
                 {user.id && <Navbar/>}
             </div>
       </div>
