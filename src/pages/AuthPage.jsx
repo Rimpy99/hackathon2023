@@ -53,6 +53,11 @@ const AuthPage = () => {
         <>
             <div className="flex justify-center items-center h-screen">
                 <div className="bg-gray-800 p-8 shadow-md rounded-2xl w-1/3 relative">
+                    <img
+                        src="../assets/Logo_appka.png"
+                        alt="Logo"
+                        className="mb-8 w-20 h-20"
+                    />
                     <h1 className="text-3xl font-bold mb-4 text-center text-gray-200">
                         Study Smart, Not Hard
                     </h1>
