@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import { setUser } from "../redux/userSlice";
 import logo from "../assets/Logo_appka.png";
 
@@ -31,16 +32,21 @@ const AuthPage = () => {
 
     const dispatch = useDispatch();
 
+    const navigate = useNavigate();
+
     const login = () => {
         switch (_login) {
             case 'student':
                 dispatch(setUser(mockStudent));
+                navigate('/home');
                 break;
             case 'parent':
                 dispatch(setUser(mockParent));
+                navigate('/home');
                 break;
             case 'teacher':
                 dispatch(setUser(mockTeacher));
+                navigate('/home');
                 break;
         }
     }

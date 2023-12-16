@@ -1,13 +1,17 @@
+import WeekCarousel from "../components/WeekCarousel";
 
-const Home = () => {
+const HomePage = () => {
     return(
-        <div>
+        <div className="w-5/6 bg-red-500">
             <div>
-                <div></div>
-                <div></div>
+                <div>pasek progresu</div>
+                <div>procent</div>
             </div>
-            <div></div>
-            <div></div>
+            <div>
+                <WeekCarousel />
+            </div>
         </div>
     );
 }
+
+export default HomePage;
