@@ -1,11 +1,10 @@
 import WeekCarousel from "../components/WeekCarousel";
-
+import ProgressBar from "../components/ProgressBar";
 const HomePage = () => {
     return(
         <>
-            <div>
-                <div>pasek progresu</div>
-                <div>procent</div>
+            <div className="flex flex-col ">
+                <ProgressBar/>
             </div>
             <div>
                 <WeekCarousel />

@@ -13,9 +13,9 @@ const WeekCarousel = () => {
     }
 
     return(
-        <div>
-            <div className="overflow-hidden bg-blue-500 w-[500px]">
-                <div className="flex w-[500px] h-[300px]">
+        <div className="px-12 pb-6">
+            <div className="overflow-hidden bg-gray-800 h-max rounded-2xl">
+                <div className="flex h-fit">
                     <Week slideNumber={currentSlide}/>
                 </div>
             </div>

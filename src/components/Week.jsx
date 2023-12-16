@@ -42,13 +42,15 @@ const mockTasks = [
 const Week = ({slideNumber}) => {
     return(
         <>
-            {mockTasks[slideNumber].map(day => {
+            {mockTasks[slideNumber].map((day, index) => {
                 return(
-                    <div>
-                        {day.length 
+                    <div className={`flex-1 ${index % 2 && 'bg-gray-700'} h-[500px]`}>
+                        {day.length
                         ?
                             day.map(task => {
-                                return task.subject;
+                                return <div className="h-32 w-52 bg-white border-4 border-purple-600 rounded-2xl my-4  text-xl text-center text-black ml-8 align-middle">
+                                    <div>{task.subject}</div>
+                                </div>
                             }) 
                         :
                         ""
