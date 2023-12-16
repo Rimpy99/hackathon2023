@@ -48,7 +48,7 @@ const Week = ({slideNumber}) => {
                         {day.length
                         ?
                             day.map(task => {
-                                return <div className="h-32 w-52 bg-white border-4 border-purple-600 rounded-2xl my-4  text-xl text-center text-black ml-8 align-middle">
+                                return <div className="h-32 mx-5 bg-white border-2 border-blue-400 rounded-2xl my-4 text-xl text-center text-black flex flex-col justify-center align-middle">
                                     <div>{task.subject}</div>
                                 </div>
                             }) 
