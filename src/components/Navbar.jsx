@@ -1,10 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog, faCalendarAlt, faSignOutAlt, faUser, faSchool } from "@fortawesome/free-solid-svg-icons";
-import { useSelector} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { signOut } from "../redux/userSlice";
 
 const Navbar = () => {
     const user = useSelector(state => state.user);
+    const dispatch = useDispatch();
 
     return (
         <div className="flex flex-col h-screen bg-black text-white p-4 items-center text-lg">
@@ -25,7 +27,7 @@ const Navbar = () => {
                     </li>
                 </div>
                 <div className="mt-auto">
-                    <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer">
+                    <li className="flex items-center my-2 hover:text-gray-300 cursor-pointer" onClick={() => dispatch(signOut())}>
                         <FontAwesomeIcon icon={faSignOutAlt} className="mr-2" /> Logout
                     </li>
                 </div>
