@@ -66,7 +66,7 @@ const AuthPage = () => {
                 <div className="bg-gray-800 p-8 shadow-md rounded-2xl w-1/3 relative">
                     <img src={logo} alt="logo" className="w-20 h-20 mx-auto mb-4" />
                     <h1 className="text-3xl font-bold mb-4 text-center text-gray-200">
-                        Study Smart, Not Hard
+                        Study Corner
                     </h1>
                     <p className="text-sm mb-4 mx-auto text-center text-gray-300">
                         Log in to your account
