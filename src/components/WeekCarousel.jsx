@@ -19,9 +19,19 @@ const WeekCarousel = () => {
                     <Week slideNumber={currentSlide}/>
                 </div>
             </div>
-            <div className="flex">
-                <button onClick={() => leftClicked()}>arrow left</button>
-                <button onClick={() => rightClicked()}>arrow right</button>
+            <div className="flex justify-center my-4">
+                <button
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l-2xl"
+                    onClick={() => leftClicked()}
+                >
+                    Previous week
+                </button>
+                <button
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-2xl"
+                    onClick={() => rightClicked()}
+                >
+                    Next week
+                </button>
             </div>
         </div>
     );
